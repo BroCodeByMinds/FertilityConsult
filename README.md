@@ -1,4 +1,4 @@
-# FertilityConsult
+# FertilityConsultApp
 
 FertilityConsult is a mobile application designed to assist users in tracking fertility cycles and providing consultations on fertility-related concerns.
 
