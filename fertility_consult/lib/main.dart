@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:fertility_consult/Screens/home_screen.dart';
+import 'package:fertility_consult/Screens/profile_screen.dart';
+import 'package:fertility_consult/Screens/help_screen.dart';
+import 'package:fertility_consult/Screens/reproductive_service_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -62,62 +66,6 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Help',
           ),
         ],
-      ),
-    );
-  }
-}
-
-class HomeView extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Home'),
-      ),
-      body: Center(
-        child: Text('Home Screen'),
-      ),
-    );
-  }
-}
-
-class ProfileView extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Profile'),
-      ),
-      body: Center(
-        child: Text('Profile Screen'),
-      ),
-    );
-  }
-}
-
-class ReproductiveServicesView extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Services'),
-      ),
-      body: Center(
-        child: Text('Reproductive Services Screen'),
-      ),
-    );
-  }
-}
-
-class HelpView extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Help'),
-      ),
-      body: Center(
-        child: Text('Help Screen'),
       ),
     );
   }
