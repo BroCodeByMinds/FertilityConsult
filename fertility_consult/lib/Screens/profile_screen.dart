@@ -1,3 +1,4 @@
+import 'package:fertility_consult/Screens/AboutUsScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:fertility_consult/Screens/help_screen.dart';
 
@@ -26,8 +27,10 @@ class ProfileView extends StatelessWidget {
             );
           }),
           _buildListTileWithSeparator('About Us', () {
-            // Handle tap on "About Us"
-            // Replace with your logic or navigate to the appropriate view
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => AboutUsScreen()),
+            );
           }),
           _buildListTileWithSeparator('Feedback', () {
             // Handle tap on "Feedback"
