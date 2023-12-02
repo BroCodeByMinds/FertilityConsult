@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fertility_consult/screens/DonateSpermAgreementScreen.dart'; 
 
 class ReproductiveServicesView extends StatelessWidget {
   @override
@@ -9,34 +10,43 @@ class ReproductiveServicesView extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          _buildSection('Donate Sperm'),
-          _buildSection('Donate Egg'),
-          _buildSection('IVF Treatment'),
-          _buildSection('ICSI Treatment'),
-          _buildSection('IUI Treatment'),
-          _buildSection('Infertility Counselling'),
-          _buildSection('Male Infertility Counselling'),
-          _buildSection('Female Infertility Counselling'),
-          _buildSection('FET Treatment'),
-          _buildSection('Embryo Banking'),
-          _buildSection('Surrogacy'),
-          _buildSection('Check Near Clinic'),
-          _buildSection('Call Appointment'),
-          _buildSection('Clinic Appointment'),
-          _buildSection('Knowledge'),
+          _buildSection(context, 'Donate Sperm'),
+          _buildSection(context, 'Donate Egg'),
+          _buildSection(context, 'IVF Treatment'),
+          _buildSection(context, 'ICSI Treatment'),
+          _buildSection(context, 'IUI Treatment'),
+          _buildSection(context, 'Infertility Counselling'),
+          _buildSection(context, 'Male Infertility Counselling'),
+          _buildSection(context, 'Female Infertility Counselling'),
+          _buildSection(context, 'FET Treatment'),
+          _buildSection(context, 'Embryo Banking'),
+          _buildSection(context, 'Surrogacy'),
+          _buildSection(context, 'Check Near Clinic'),
+          _buildSection(context, 'Call Appointment'),
+          _buildSection(context, 'Clinic Appointment'),
+          _buildSection(context, 'Knowledge'),
         ],
       ),
     );
   }
 
-  Widget _buildSection(String title) {
+  Widget _buildSection(BuildContext context, String title) {
     return Card(
       margin: EdgeInsets.all(8.0),
       child: ListTile(
         title: Text(title),
         onTap: () {
-          // Handle tap on each section
-          // Replace with your logic or navigate to the appropriate view
+          if (title == 'Donate Sperm') {
+            // Navigate to DonateSpermAgreementScreen when "Donate Sperm" is tapped
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => DonateSpermAgreementScreen(),
+              ),
+            );
+          } else {
+            // Handle other sections or navigation logic
+          }
         },
         trailing: Icon(Icons.chevron_right),
       ),

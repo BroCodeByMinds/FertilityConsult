@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:fertility_consult/Utils/about_us_constants.dart';
+import 'package:fertility_consult/Utils/constants.dart';
 
 class AboutUsScreen extends StatelessWidget {
   @override
@@ -56,7 +56,7 @@ class AboutUsScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 8.0),
                   Text(
-                    AboutUsConstants.aboutUsInfo,
+                    Constants.aboutUsInfo,
                     // Your detailed description goes here
                   ),
                   // Add similar Text widgets for other points
