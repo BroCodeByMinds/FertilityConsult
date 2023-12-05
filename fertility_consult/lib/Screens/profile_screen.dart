@@ -31,7 +31,7 @@ class ProfileView extends StatelessWidget {
           _buildListTileWithSeparator('About Us', () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const AboutUsScreen()),
+              MaterialPageRoute(builder: (context) =>  AboutUsScreen()),
             );
           }),
           _buildListTileWithSeparator('Feedback', () {
