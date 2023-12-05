@@ -3,6 +3,8 @@ import 'package:fertility_consult/Screens/home_screen.dart';
 import 'package:fertility_consult/Screens/profile_screen.dart';
 import 'package:fertility_consult/Screens/help_screen.dart';
 import 'package:fertility_consult/Screens/reproductive_service_screen.dart';
+import 'package:fertility_consult/Screens/RegistrationScreen.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Tab Navigation',
+      title: 'Fertility Consult',
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
@@ -37,6 +39,13 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    bool isUserRegistered = false; // Replace this with your logic to check if the user is registered
+
+    if (!isUserRegistered) {
+      // If the user is not registered, navigate to the registration page
+      return RegistrationScreen(); // Replace RegistrationScreen with your registration page widget
+    }
+
     return Scaffold(
       body: _tabs[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
