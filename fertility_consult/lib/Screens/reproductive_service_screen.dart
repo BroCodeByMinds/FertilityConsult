@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:fertility_consult/screens/DonateSpermAgreementScreen.dart'; 
 
 class ReproductiveServicesView extends StatelessWidget {
+  const ReproductiveServicesView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Reproductive Services'),
+        title: const Text('Reproductive Services'),
       ),
       body: ListView(
         children: [
@@ -32,7 +34,7 @@ class ReproductiveServicesView extends StatelessWidget {
 
   Widget _buildSection(BuildContext context, String title) {
     return Card(
-      margin: EdgeInsets.all(8.0),
+      margin: const EdgeInsets.all(8.0),
       child: ListTile(
         title: Text(title),
         onTap: () {
@@ -48,7 +50,7 @@ class ReproductiveServicesView extends StatelessWidget {
             // Handle other sections or navigation logic
           }
         },
-        trailing: Icon(Icons.chevron_right),
+        trailing: const Icon(Icons.chevron_right),
       ),
     );
   }
