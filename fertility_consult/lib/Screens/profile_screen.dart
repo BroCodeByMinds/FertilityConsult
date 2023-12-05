@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:fertility_consult/Screens/help_screen.dart';
 
 class ProfileView extends StatelessWidget {
+  const ProfileView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Profile'),
+        title: const Text('Profile'),
       ),
       body: ListView(
         children: [
@@ -23,13 +25,13 @@ class ProfileView extends StatelessWidget {
             // Navigate to HelpView on Help section tap
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => HelpView()),
+              MaterialPageRoute(builder: (context) => const HelpView()),
             );
           }),
           _buildListTileWithSeparator('About Us', () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => AboutUsScreen()),
+              MaterialPageRoute(builder: (context) => const AboutUsScreen()),
             );
           }),
           _buildListTileWithSeparator('Feedback', () {
@@ -52,9 +54,9 @@ class ProfileView extends StatelessWidget {
         ListTile(
           title: Text(title),
           onTap: onTap,
-          trailing: Icon(Icons.chevron_right),
+          trailing: const Icon(Icons.chevron_right),
         ),
-        Divider(),
+        const Divider(),
       ],
     );
   }
@@ -65,7 +67,7 @@ class ProfileView extends StatelessWidget {
       onTap: () {
         // Handle tap on "Call Support"
       },
-      trailing: Icon(Icons.chevron_right),
+      trailing: const Icon(Icons.chevron_right),
     );
   }
 }
