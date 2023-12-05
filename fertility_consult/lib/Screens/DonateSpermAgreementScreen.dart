@@ -3,6 +3,8 @@ import 'package:fertility_consult/Screens/DonateSpermDetailsScreen.dart';
 import 'package:fertility_consult/Utils/constants.dart';
 
 class DonateSpermAgreementScreen extends StatefulWidget {
+  const DonateSpermAgreementScreen({Key? key}) : super(key: key);
+
   @override
   _DonateSpermAgreementScreenState createState() =>
       _DonateSpermAgreementScreenState();
@@ -16,20 +18,20 @@ class _DonateSpermAgreementScreenState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Donate Sperm Agreement'),
+        title: const Text('Donate Sperm Agreement'),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(
+            const Text(
               'Please read and agree to the terms:',
               style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10.0),
-            Text(Constants.donateSpermAgreementInfo),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 10.0),
+            const Text(Constants.donateSpermAgreementInfo),
+            const SizedBox(height: 20.0),
             Row(
               children: <Widget>[
                 Checkbox(
@@ -40,17 +42,17 @@ class _DonateSpermAgreementScreenState
                     });
                   },
                 ),
-                Text('I agree'),
+                const Text('I agree'),
               ],
             ),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () {
                 if (_isAgreed) {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => DonateSpermDetailsScreen(),
+                      builder: (context) => const DonateSpermDetailsScreen(),
                     ),
                   );
                 } else {
@@ -58,15 +60,15 @@ class _DonateSpermAgreementScreenState
                     context: context,
                     builder: (BuildContext context) {
                       return AlertDialog(
-                        title: Text('Agreement Required'),
-                        content: Text(
+                        title: const Text('Agreement Required'),
+                        content: const Text(
                             'Please agree to the terms and conditions to proceed.'),
                         actions: [
                           TextButton(
                             onPressed: () {
                               Navigator.of(context).pop(); // Close the dialog
                             },
-                            child: Text('OK'),
+                            child: const Text('OK'),
                           ),
                         ],
                       );
@@ -74,7 +76,7 @@ class _DonateSpermAgreementScreenState
                   );
                 }
               },
-              child: Text('Proceed'),
+              child: const Text('Proceed'),
             ),
           ],
         ),
