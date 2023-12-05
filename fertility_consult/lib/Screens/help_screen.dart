@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 class HelpView extends StatelessWidget {
+  const HelpView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Help'),
+        title: const Text('Help'),
       ),
       body: ListView(
         children: [
@@ -22,19 +24,19 @@ class HelpView extends StatelessWidget {
 
   Widget _buildSection(String header, String content) {
     return Card(
-      margin: EdgeInsets.all(8.0),
+      margin: const EdgeInsets.all(8.0),
       child: Padding(
-        padding: EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               header,
-              style: TextStyle(
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 8.0),
+            const SizedBox(height: 8.0),
             Text(content),
           ],
         ),
