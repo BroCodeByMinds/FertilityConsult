@@ -1,3 +1,4 @@
+import 'package:fertility_consult/Screens/landing_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fertility_consult/Screens/profile_screen.dart';
 import 'package:fertility_consult/Screens/help_screen.dart';
@@ -16,8 +17,9 @@ class _HomeViewState extends State<HomeView> {
   bool isUserRegistered = false;
   int _currentIndex = 0;
   final List<Widget> _tabs = [
-    ProfileView(), // Replace with your actual ProfileView widget
-    ReproductiveServicesView(), // Replace with your actual ReproductiveServicesView widget
+    LandingScreen(),
+    ProfileView(), // Replace with your actual ProfileView widget 
+    ReproductiveServicesView(), // Replace with your actual ReproductiveServicesView widget 
     HelpView(), // Replace with your actual HelpView widget
   ];
 
@@ -54,6 +56,10 @@ class _HomeViewState extends State<HomeView> {
           });
         },
         items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.house), // Icon for Home
+            label: 'Home',
+          ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Profile',
