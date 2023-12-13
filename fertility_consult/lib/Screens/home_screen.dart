@@ -16,8 +16,8 @@ class _HomeViewState extends State<HomeView> {
   bool isUserRegistered = false;
   int _currentIndex = 0;
   final List<Widget> _tabs = [
-    ProfileView(), // Replace with your actual ProfileView widget
-    ReproductiveServicesView(), // Replace with your actual ReproductiveServicesView widget
+    ProfileView(), // Replace with your actual ProfileView widget 
+    ReproductiveServicesView(), // Replace with your actual ReproductiveServicesView widget 
     HelpView(), // Replace with your actual HelpView widget
   ];
 
@@ -54,6 +54,10 @@ class _HomeViewState extends State<HomeView> {
           });
         },
         items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.house), // Icon for Home
+            label: 'Home',
+          ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Profile',
