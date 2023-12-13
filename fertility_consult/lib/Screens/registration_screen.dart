@@ -107,14 +107,21 @@ class RegistrationScreen extends StatelessWidget {
               },
               child: const Text('Register'),
             ),
-            ElevatedButton(
-              onPressed: () {
+            const SizedBox(height: 8.0), // Add some space between Register button and Sign In text
+            GestureDetector(
+              onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const LoginScreen()), // Navigate to LoginScreen
                 );
               },
-              child: const Text('Login'),
+              child: const Text(
+                'Already have an account? Sign In',
+                style: TextStyle(
+                  color: Colors.blue, // You can set the text color as per your design
+                  decoration: TextDecoration.underline,
+                ),
+              ),
             ),
           ],
         ),
