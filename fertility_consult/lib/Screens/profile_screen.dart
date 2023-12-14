@@ -14,12 +14,9 @@ class ProfileView extends StatelessWidget {
       body: ListView(
         children: [
           _buildListTileWithSeparator('My Appointments', () {
-            // Handle tap on "My Appointments"
-            // Replace with your logic or navigate to the appropriate view
+
           }),
           _buildListTileWithSeparator('Refer & Earn', () {
-            // Handle tap on "Refer & Earn"
-            // Replace with your logic or navigate to the appropriate view
           }),
           _buildListTileWithSeparator('Help', () {
             // Navigate to HelpView on Help section tap
@@ -35,12 +32,10 @@ class ProfileView extends StatelessWidget {
             );
           }),
           _buildListTileWithSeparator('Feedback', () {
-            // Handle tap on "Feedback"
-            // Replace with your logic or navigate to the appropriate view
+
           }),
           _buildListTileWithSeparator('Settings', () {
-            // Handle tap on "Settings"
-            // Replace with your logic or navigate to the appropriate view
+
           }),
           _buildListTileWithoutSeparator('Call Support'),
         ],
@@ -65,7 +60,7 @@ class ProfileView extends StatelessWidget {
     return ListTile(
       title: Text(title),
       onTap: () {
-        // Handle tap on "Call Support"
+        
       },
       trailing: const Icon(Icons.chevron_right),
     );
