@@ -23,6 +23,7 @@ class RegistrationScreen extends StatelessWidget {
       if (response.statusCode == 200) {
         // Registration successful
         print('Registration successful: ${response.body}');
+        // ignore: use_build_context_synchronously
         showDialog(
           context: context,
           builder: (BuildContext context) {
