@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:fertility_consult/screens/home_screen.dart';
+// ignore: depend_on_referenced_packages
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert'; 
 
@@ -38,6 +39,7 @@ class LoginScreen extends StatelessWidget {
         prefs.setString('token', token);
 
         // Show the success dialog and navigate to the home screen
+        // ignore: use_build_context_synchronously
         showDialog(
           context: context,
           builder: (BuildContext context) {
@@ -50,7 +52,7 @@ class LoginScreen extends StatelessWidget {
                     Navigator.of(context).pop(); // Close the dialog
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => HomeView()), // Navigate to HomeScreen after successful login
+                      MaterialPageRoute(builder: (context) => const HomeView()), // Navigate to HomeScreen after successful login
                     );
                   },
                   child: const Text('OK'),
@@ -62,6 +64,7 @@ class LoginScreen extends StatelessWidget {
       } else {
         // Login failed
         print('Login failed: ${response.statusCode}');
+        // ignore: use_build_context_synchronously
         showDialog(
           context: context,
           builder: (BuildContext context) {
