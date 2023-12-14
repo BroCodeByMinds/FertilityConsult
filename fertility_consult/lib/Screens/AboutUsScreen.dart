@@ -3,6 +3,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:fertility_consult/Utils/constants.dart';
 
 class AboutUsScreen extends StatelessWidget {
+  const AboutUsScreen({Key? key}) : super(key: key);
+
     @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +22,7 @@ class AboutUsScreen extends StatelessWidget {
                 enlargeCenterPage: true,
                 aspectRatio: 16 / 9,
                 autoPlayCurve: Curves.fastOutSlowIn,
-                autoPlayAnimationDuration: Duration(milliseconds: 800),
+                autoPlayAnimationDuration: const Duration(milliseconds: 800),
                 enableInfiniteScroll: true,
                 viewportFraction: 0.8,
               ),
@@ -41,8 +43,8 @@ class AboutUsScreen extends StatelessWidget {
                 );
               }).toList(),
             ),
-            SizedBox(height: 20.0),
-            Padding(
+            const SizedBox(height: 20.0),
+            const Padding(
               padding: EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
