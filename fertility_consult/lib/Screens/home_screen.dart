@@ -4,12 +4,14 @@ import 'package:fertility_consult/Screens/profile_screen.dart';
 import 'package:fertility_consult/Screens/help_screen.dart';
 import 'package:fertility_consult/Screens/reproductive_service_screen.dart';
 import 'package:fertility_consult/Screens/registration_screen.dart'; // Import your registration screen
+// ignore: depend_on_referenced_packages
 import 'package:shared_preferences/shared_preferences.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _HomeViewState createState() => _HomeViewState();
 }
 
@@ -18,9 +20,9 @@ class _HomeViewState extends State<HomeView> {
   int _currentIndex = 0;
   final List<Widget> _tabs = [
     LandingScreen(),
-    ProfileView(), // Replace with your actual ProfileView widget 
-    ReproductiveServicesView(), // Replace with your actual ReproductiveServicesView widget 
-    HelpView(), // Replace with your actual HelpView widget
+    const ProfileView(), 
+    const ReproductiveServicesView(), 
+    const HelpView(), 
   ];
 
   @override
