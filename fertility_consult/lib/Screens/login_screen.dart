@@ -1,4 +1,5 @@
 
+import 'package:fertility_consult/api/api_endpoints.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:fertility_consult/screens/home_screen.dart';
@@ -7,7 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert'; 
 
 class LoginScreen extends StatelessWidget {
-  final String loginUrl = 'http://localhost:3000/user/checkUserRegistration';
+  final String loginUrl = ApiEndpoints.userCheckRegistration;
 
   const LoginScreen({Key? key}) : super(key: key);
 
