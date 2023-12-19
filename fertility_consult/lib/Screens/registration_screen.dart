@@ -1,9 +1,10 @@
+import 'package:fertility_consult/api/api_endpoints.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:fertility_consult/Screens/login_screen.dart';
 
 class RegistrationScreen extends StatelessWidget {
-  final String serverUrl = 'http://localhost:3000/user/register';
+  final String serverUrl = ApiEndpoints.userRegister;
 
   const RegistrationScreen({Key? key}) : super(key: key);
 

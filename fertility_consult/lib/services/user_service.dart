@@ -1,7 +1,8 @@
+import 'package:fertility_consult/api/api_endpoints.dart';
 import 'package:http/http.dart' as http;
 
 Future<bool> checkUserRegistration() async {
-  const String checkRegistrationUrl = 'http://localhost:3000/user/checkUserRegistration';
+  const String checkRegistrationUrl = ApiEndpoints.userCheckRegistration;
 
   try {
     var response = await http.get(Uri.parse(checkRegistrationUrl));
