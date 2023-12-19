@@ -1,3 +1,4 @@
+import 'package:fertility_consult/Utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:fertility_consult/screens/DonateSpermAgreementScreen.dart'; 
 
@@ -10,24 +11,12 @@ class ReproductiveServicesView extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Reproductive Services'),
       ),
-      body: ListView(
-        children: [
-          _buildSection(context, 'Donate Sperm'),
-          _buildSection(context, 'Donate Egg'),
-          _buildSection(context, 'IVF Treatment'),
-          _buildSection(context, 'ICSI Treatment'),
-          _buildSection(context, 'IUI Treatment'),
-          _buildSection(context, 'Infertility Counselling'),
-          _buildSection(context, 'Male Infertility Counselling'),
-          _buildSection(context, 'Female Infertility Counselling'),
-          _buildSection(context, 'FET Treatment'),
-          _buildSection(context, 'Embryo Banking'),
-          _buildSection(context, 'Surrogacy'),
-          _buildSection(context, 'Check Near Clinic'),
-          _buildSection(context, 'Call Appointment'),
-          _buildSection(context, 'Clinic Appointment'),
-          _buildSection(context, 'Knowledge'),
-        ],
+      body: ListView.builder(
+        itemCount: Constants.reproductiveServices.length,
+        itemBuilder: (BuildContext context, int index) {
+          final String service = Constants.reproductiveServices[index];
+          return _buildSection(context, service);
+        },
       ),
     );
   }
@@ -47,7 +36,7 @@ class ReproductiveServicesView extends StatelessWidget {
               ),
             );
           } else {
-            // Handle other sections or navigation logic
+            // Handle navigation for other services here
           }
         },
         trailing: const Icon(Icons.chevron_right),

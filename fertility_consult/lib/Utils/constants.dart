@@ -36,4 +36,22 @@ class Constants {
 
     Legal Aspects: Legal agreements and consents may be required from both the donor and the recipient, outlining the rights, responsibilities, and anonymity clauses.
     ''';
+
+    static const List<String> reproductiveServices = [
+    'Donate Sperm',
+    'Donate Egg',
+    'IVF Treatment',
+    'ICSI Treatment',
+    'IUI Treatment',
+    'Infertility Counselling',
+    'Male Infertility Counselling',
+    'Female Infertility Counselling',
+    'FET Treatment',
+    'Embryo Banking',
+    'Surrogacy',
+    'Check Near Clinic',
+    'Call Appointment',
+    'Clinic Appointment',
+    'Knowledge',
+  ];
 }
